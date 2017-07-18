@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "7ad4703e408bfc86acd1a70b3036339aab369ea2f653816a17217708a0bfb8ca",
+      "name" : "libyuv"
+    }
+  ],
+  "commitish" : "e2bb4d980873b325a6a4f56929dcfd2e0fac0b8a",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}

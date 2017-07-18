@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED7EEB481F1CD433008C49FF /* dragon2.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7EEB471F1CD432008C49FF /* dragon2.png */; };
+		ED7EEB4A1F1DC7F8008C49FF /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = ED7EEB491F1DC7F8008C49FF /* VGG16.mlmodel */; };
+		ED7EEB4F1F1DD8CA008C49FF /* libyuv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7EEB4C1F1DD7C0008C49FF /* libyuv.framework */; };
+		ED7EEB511F1DDE6D008C49FF /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED7EEB501F1DDE6D008C49FF /* music.mp3 */; };
 		ED81E3641F0E48BB00367641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81E3631F0E48BB00367641 /* AppDelegate.swift */; };
 		ED81E3661F0E48BB00367641 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = ED81E3651F0E48BB00367641 /* art.scnassets */; };
 		ED81E3681F0E48BB00367641 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81E3671F0E48BB00367641 /* ViewController.swift */; };
@@ -16,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED7EEB471F1CD432008C49FF /* dragon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon2.png; sourceTree = "<group>"; };
+		ED7EEB491F1DC7F8008C49FF /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = VGG16.mlmodel; path = ../../../Downloads/VGG16.mlmodel; sourceTree = "<group>"; };
+		ED7EEB4C1F1DD7C0008C49FF /* libyuv.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libyuv.framework; path = Carthage/Build/iOS/libyuv.framework; sourceTree = "<group>"; };
+		ED7EEB4E1F1DD8B8008C49FF /* libyuv.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libyuv.framework; sourceTree = "<group>"; };
+		ED7EEB501F1DDE6D008C49FF /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = ../../../Downloads/music.mp3; sourceTree = "<group>"; };
 		ED81E3601F0E48BB00367641 /* ChungHua No1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChungHua No1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED81E3631F0E48BB00367641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED81E3651F0E48BB00367641 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -31,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7EEB4F1F1DD8CA008C49FF /* libyuv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED7EEB4B1F1DD7BF008C49FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED7EEB4E1F1DD8B8008C49FF /* libyuv.framework */,
+				ED7EEB4C1F1DD7C0008C49FF /* libyuv.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED81E3571F0E48BB00367641 = {
 			isa = PBXGroup;
 			children = (
 				ED81E3621F0E48BB00367641 /* ChungHua No1 */,
 				ED81E3611F0E48BB00367641 /* Products */,
+				ED7EEB4B1F1DD7BF008C49FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +76,10 @@
 		ED81E3621F0E48BB00367641 /* ChungHua No1 */ = {
 			isa = PBXGroup;
 			children = (
+				ED7EEB491F1DC7F8008C49FF /* VGG16.mlmodel */,
 				ED81E3631F0E48BB00367641 /* AppDelegate.swift */,
+				ED7EEB471F1CD432008C49FF /* dragon2.png */,
+				ED7EEB501F1DDE6D008C49FF /* music.mp3 */,
 				ED81E3651F0E48BB00367641 /* art.scnassets */,
 				ED81E3671F0E48BB00367641 /* ViewController.swift */,
 				ED81E3691F0E48BB00367641 /* Main.storyboard */,
@@ -77,6 +100,7 @@
 				ED81E35C1F0E48BB00367641 /* Sources */,
 				ED81E35D1F0E48BB00367641 /* Frameworks */,
 				ED81E35E1F0E48BB00367641 /* Resources */,
+				ED7EEB4D1F1DD82E008C49FF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -127,12 +151,32 @@
 			files = (
 				ED81E3661F0E48BB00367641 /* art.scnassets in Resources */,
 				ED81E3701F0E48BB00367641 /* LaunchScreen.storyboard in Resources */,
+				ED7EEB511F1DDE6D008C49FF /* music.mp3 in Resources */,
 				ED81E36D1F0E48BB00367641 /* Assets.xcassets in Resources */,
 				ED81E36B1F0E48BB00367641 /* Main.storyboard in Resources */,
+				ED7EEB481F1CD433008C49FF /* dragon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED7EEB4D1F1DD82E008C49FF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/libyuv.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/libyuv.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED81E35C1F0E48BB00367641 /* Sources */ = {
@@ -141,6 +185,7 @@
 			files = (
 				ED81E3681F0E48BB00367641 /* ViewController.swift in Sources */,
 				ED81E3641F0E48BB00367641 /* AppDelegate.swift in Sources */,
+				ED7EEB4A1F1DC7F8008C49FF /* VGG16.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +319,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8949B26WW7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ChungHua No1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iCHEF.ChungHua-No1";
@@ -288,6 +337,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8949B26WW7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ChungHua No1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iCHEF.ChungHua-No1";
@@ -316,6 +369,7 @@
 				ED81E3761F0E48BB00367641 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
