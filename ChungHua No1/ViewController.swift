@@ -9,11 +9,11 @@
 import UIKit
 import SceneKit
 import ARKit
+import Vision
 
 class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    let VGG16Model = VGG16()
     let queue = { () -> OperationQueue in
         let queue = OperationQueue()
         queue.maxConcurrentOperationCount = 1
@@ -92,16 +92,29 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         }
         
         queue.addOperation { () -> Void in
-            do {
-                let prediction = try self.VGG16Model.prediction(image: self.resize(pixelBuffer: image)!)
-                DispatchQueue.main.async {
-                    if prediction.classLabel.contains("toaster") {
+            guard let model = try? VNCoreMLModel(for: VGG16().model) else { fatalError("轉換 Model 出錯了") }
+            let request = VNCoreMLRequest(model: model) { (request, error) in
+                if error == nil {
+                    guard let results = request.results as? [VNClassificationObservation],
+                        let classification = results.first else {
+                            fatalError("出錯啦~")
+                    }
+                    
+                    if classification.identifier.contains("hotpot") {
                         self.showDragon(currentFrame: frame)
                     }
+                    
+                    print(classification.identifier)
+                }else{
+                    fatalError("Unexpected error ocurred: \(error!.localizedDescription).")
                 }
             }
-            catch let error as NSError {
-                fatalError("Unexpected error ocurred: \(error.localizedDescription).")
+            
+            let handler = VNImageRequestHandler(cvPixelBuffer: image, options: [:])
+            do {
+                try handler.perform([request])
+            } catch {
+                print("Perform quests error!!")
             }
         }
     }
